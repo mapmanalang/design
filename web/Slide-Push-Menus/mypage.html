@@ -1,28 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>My Page</title>
-  <meta name="description" content="A Demo Page With Sliding Menu.">
-  <link rel="stylesheet" href="css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>My Page</title>
+<meta name="description" content="A Demo Page With Sliding Menu.">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/style.css">
+<script type="text/javascript" src="js/src/jquery-1.11.3.min.js"></script>
 <style>
 .c-menu__item {
-  width:276px;
-  height:100px;
+width:276px;
+height:100px;
 }
 </style>
 </head>
 <body>
 <div id="o-wrapper" class="o-wrapper">
-
-  <header class="o-header">
-    <nav class="o-header-nav">
-      <a href="http://callmenick.com/_development/image-caption-reveal-on-hover/" class="o-header-nav__link"><i class="fa fa-arrow-left"></i> Previous Demo</a>
-    </nav>
-  </header><!-- /o-header -->
-
   <main class="o-content">
     <div class="o-container">
       <div class="c-buttons">
@@ -32,23 +26,21 @@
 
     </div><!-- /o-container -->
   </main><!-- /o-content -->
-
-  <footer class="o-footer">
-    <div class="o-container">
-      <small>&copy; 2015, callmenick.com</small>
-    </div>
-  </footer><!-- /o-footer -->
-
 </div><!-- /o-wrapper -->
 <nav id="c-menu--slide-left" class="c-menu c-menu--slide-left">
   <button class="c-menu__close">&larr; Close Menu</button>
   <ul class="c-menu__items">
-    <li class="c-menu__item" style="background: url('./thumbA.png')">
-      foo
+    <li class="c-menu__item " style="background: url('./thumbA.png')">
+        <span class="bottom" >foo</span>
     </li>
-    <li class="c-menu__item"><a href="#" class="c-menu__link">About</a></li>
-    <li class="c-menu__item"><a href="#" class="c-menu__link">Services</a></li>
-    <li class="c-menu__item"><a href="#" class="c-menu__link">Work</a></li>
+    <li class="c-menu__item">
+        <div class="floating-box">Floating Box</div>
+    </li>
+    <li class="c-menu__item">
+        <div><span class="test">text ni span</span></div>
+    </li>
+    <li class="c-menu__item">
+    </li>
     <li class="c-menu__item"><a href="#" class="c-menu__link">Contact</a></li>
   </ul>
 </nav><!-- /c-menu slide-left -->
@@ -91,6 +83,14 @@
     e.preventDefault;
     pushLeft.open();
   });
+</script>
+<script>
+// push the button via script
+(function($){
+    $( document ).ready(function() {
+        $("#c-button--slide-left").click();
+    });
+ })(jQuery);
 </script>
 </body>
 </html>
