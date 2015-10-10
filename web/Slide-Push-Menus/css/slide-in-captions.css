@@ -1,17 +1,28 @@
+#page-wrap {
+    /* width: 960px;
+    margin: 100px auto; */
+    position: relative;
+}
+
 figure {
   display: block;
   position: relative;
   float: left;
   overflow: hidden;
-  margin: 0 20px 20px 0;
+  margin: 0;
 }
+
+figure img {
+    display: block;
+}
+
 figcaption {
   position: absolute;
   background: black;
   background: rgba(0,0,0,0.75);
   color: white;
   padding: 10px 20px;
-  opacity: 0;
+  opacity: 1;
   -webkit-transition: all 0.6s ease;
   -moz-transition:    all 0.6s ease;
   -o-transition:      all 0.6s ease;
@@ -19,8 +30,9 @@ figcaption {
 figure:hover figcaption {
   opacity: 1;
 }
+/*
 figure:before {
-  content: "?";
+  content: "";
   position: absolute;
   font-weight: 800;
   background: black;
@@ -38,6 +50,7 @@ figure:before {
   -moz-transition: all 0.6s ease;
   opacity: 0.75;
 }
+ */
 figure:hover:before {
   opacity: 0;
 }
@@ -57,3 +70,8 @@ figure:hover:before {
 .cap-bot:before { bottom: 10px; left: 10px; }
 .cap-bot figcaption { left: 0; bottom: -30%;}
 .cap-bot:hover figcaption { bottom: 0; }
+
+/* new mods */
+.cap-right-fixed:before { bottom: 10px; right: 10px; }
+.cap-right-fixed figcaption { bottom: 0; right: 0; }
+.cap-right-fixed:hover figcaption { right: 0; }
