@@ -17,6 +17,11 @@ height:100px;
 <link rel="stylesheet" href="css/slide-in-captions.css">
 </head>
 <body>
+<div class="menu-button">
+    <span>&nbsp;</span>
+    <span>&nbsp;</span>
+    <span>&nbsp;</span>
+</div>
 <div id="o-wrapper" class="o-wrapper">
   <main class="o-content">
     <div class="o-container">
@@ -25,9 +30,9 @@ height:100px;
       </div>
       <div id="github-icons"></div>
 
-    </div><!-- /o-container -->
-  </main><!-- /o-content -->
-</div><!-- /o-wrapper -->
+    </div>
+  </main>
+</div>
 <nav id="c-menu--slide-left" class="c-menu c-menu--slide-left">
   <button class="c-menu__close">&larr; Close Menu</button>
   <ul class="c-menu__items">
@@ -40,13 +45,13 @@ height:100px;
     <li class="c-menu__item">
         <figure class="cap-right-fixed">
             <img src="./thumbA.png" alt="">
-            <figcaption>Heres a Caption</figcaption>
+            <figcaption>Heres another Caption</figcaption>
         </figure>
     </li>
     <li class="c-menu__item">
         <figure class="cap-right-fixed">
             <img src="./thumbA.png" alt="">
-            <figcaption>Heres a Caption</figcaption>
+            <figcaption>More Caption Colmpanero</figcaption>
         </figure>
     </li>
   </ul>
@@ -72,23 +77,6 @@ height:100px;
   slideLeftBtn.addEventListener('click', function(e) {
     e.preventDefault;
     slideLeft.open();
-  });
-
-  /**
-   * Push left instantiation and action.
-   */
-  var pushLeft = new Menu({
-    wrapper: '#o-wrapper',
-    type: 'push-left',
-    menuOpenerClass: '.c-button',
-    maskId: '#c-mask'
-  });
-
-  var pushLeftBtn = document.querySelector('#c-button--push-left');
-
-  pushLeftBtn.addEventListener('click', function(e) {
-    e.preventDefault;
-    pushLeft.open();
   });
 </script>
 <script>
